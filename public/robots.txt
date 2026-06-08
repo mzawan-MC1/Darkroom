@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /account/
+Disallow: /checkout/
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+Sitemap: https://thelockout.ae/sitemap.xml

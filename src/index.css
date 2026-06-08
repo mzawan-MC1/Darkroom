@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-charcoal-950 text-slate-200 antialiased;
+    background-image: theme('backgroundImage.horror-radial');
+    background-attachment: fixed;
+    font-family: theme('fontFamily.sans');
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: theme('fontFamily.display');
+    letter-spacing: theme('letterSpacing.wider');
+  }
+
+  h4,
+  h5,
+  h6 {
+    font-family: theme('fontFamily.display');
+    letter-spacing: theme('letterSpacing.wide');
+  }
+
+  ::selection {
+    background: rgba(244, 63, 94, 0.35);
+  }
+
+  *:focus-visible {
+    outline: 2px solid rgba(244, 63, 94, 0.7);
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .dr-card {
+    @apply rounded-2xl border border-red-900/30 bg-black/40 shadow-panel backdrop-blur-md;
+  }
+
+  .dr-panel {
+    @apply rounded-2xl border border-red-900/35 bg-slate-950/70 shadow-panel backdrop-blur-md;
+  }
+
+  .dr-btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition-colors;
+  }
+
+  .dr-btn-primary {
+    @apply dr-btn bg-primary-600 text-white shadow-red-glow hover:bg-primary-500;
+  }
+
+  .dr-btn-ghost {
+    @apply dr-btn border border-red-900/30 bg-black/20 text-slate-200 hover:bg-black/40 hover:border-primary-600/60;
+  }
+
+  .dr-btn-danger {
+    @apply dr-btn bg-primary-700 text-white hover:bg-primary-600 shadow-red-glow;
+  }
+
+  .dr-input {
+    @apply w-full rounded-lg border border-red-900/30 bg-black/35 px-3 py-2 text-slate-100 placeholder:text-slate-500 focus:border-primary-500/70 focus:ring-2 focus:ring-primary-500/30;
+  }
+
+  .dr-select {
+    @apply w-full rounded-lg border border-red-900/30 bg-black/35 px-3 py-2 text-slate-100 focus:border-primary-500/70 focus:ring-2 focus:ring-primary-500/30;
+  }
+
+  .dr-textarea {
+    @apply w-full rounded-lg border border-red-900/30 bg-black/35 px-3 py-2 text-slate-100 placeholder:text-slate-500 focus:border-primary-500/70 focus:ring-2 focus:ring-primary-500/30;
+  }
+
+  .dr-table {
+    @apply w-full overflow-hidden rounded-xl border border-red-900/30 bg-black/30;
+  }
+
+  .dr-th {
+    @apply bg-black/40 px-6 py-3 text-left text-xs font-semibold uppercase tracking-wider text-slate-300;
+  }
+
+  .dr-td {
+    @apply px-6 py-4 text-sm text-slate-200;
+  }
+}
