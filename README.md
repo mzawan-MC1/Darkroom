@@ -142,8 +142,6 @@ npm run lint
 - [Implementation Summary](IMPLEMENTATION_SUMMARY.md)
 - [Database Schema](supabase/migrations/)
 
-## 🚧 Roadmap
-
 ### New Deployments
 - Calendar booking interface
 - POS tablet system
