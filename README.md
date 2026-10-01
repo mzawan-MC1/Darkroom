@@ -144,7 +144,7 @@ npm run lint
 
 ## 🚧 Roadmap
 
-### Coming Soon
+### New Deployments
 - Calendar booking interface
 - POS tablet system
 - Advanced analytics dashboard
